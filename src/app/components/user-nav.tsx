@@ -17,7 +17,6 @@ import {
   ShoppingCart,
 } from "lucide-react";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
-
 import Link from "next/link";
 
 export const navItems = [
@@ -42,7 +41,7 @@ export function UserNav({
         <Button variant="ghost" className="relative h-10 w-10 rounded-full">
           <Avatar className="h-10 w-10 rounded-full">
             <AvatarImage src={image} alt="" />
-            <AvatarFallback>Jan</AvatarFallback>
+            <AvatarFallback>{name.slice(0, 3).toUpperCase()}</AvatarFallback>
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
@@ -72,7 +71,6 @@ export function UserNav({
           ))}
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-
         <DropdownMenuItem
           className="w-full flex justify-between items-center"
           asChild

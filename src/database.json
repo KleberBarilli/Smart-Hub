@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": "123",
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "stripeCustomerId": "cus_123"
+    }
+  ]
+}
