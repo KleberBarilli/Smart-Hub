@@ -1,4 +1,5 @@
-import { ThemeToggle } from "./components/theme-toogle";
+import { Button } from "@/components/ui/button";
+import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
 export default function Home() {
   return (
@@ -11,6 +12,22 @@ export default function Home() {
                 Sort your products
               </span>
             </span>
+            <h1 className="mt-8 text-3xl font-extrabold tracking-tight lg:text-6xl">
+              Loren ipsun bla bla bla bla bla bla bla bla bla bla
+            </h1>
+            <p className="max-w-xl mx-auto mt-8 text-base lg:text-xl text-secondary-foreground">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div className="flex justify-center max-w-sm mx-auto mt-10">
+            <RegisterLink>
+              <Button size="lg" className="w-full">
+                Sign Up to view your Products
+              </Button>
+            </RegisterLink>
           </div>
         </div>
       </div>

@@ -21,7 +21,6 @@ export async function Navbar() {
           <ThemeToggle />
           {(await isAuthenticated()) ? (
             <LogoutLink>
-              {" "}
               <Button>Logout</Button>
             </LogoutLink>
           ) : (
