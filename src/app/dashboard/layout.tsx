@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { DashboardNav } from "../components/dashboard-nav";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { stripe } from "../lib/stripe";
 
 async function getUserData({
   email,
@@ -23,9 +24,18 @@ async function getUserData({
     lastName,
     email,
     profileImage,
+    stripeCustomerId: "cus_Q9KKTBpDQwzxZX",
   };
   if (!user) {
     //crteate user in api
+  }
+
+  if (!user.stripeCustomerId) {
+    const data = await stripe.customers.create({
+      email: user.email,
+    });
+
+    console.log("STRIPE CUSTOMER ID", data.id);
   }
   return user;
 }
